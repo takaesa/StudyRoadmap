@@ -1,14 +1,6 @@
-import { useRouter } from "next/router";
-
 import Link from "next/link";
 
 function PostList({ posts }) {
-    const router = useRouter()
-
-    if (router.isFallback) {
-        return <div>Loading...</div>
-
-    }
 
     return (
         <div>
@@ -52,7 +44,7 @@ export async function getStaticPaths() {
         //     }
         // ],
         paths,
-        fallback: false
+        fallback: 'blocking'
     }
 }
 
