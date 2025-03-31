@@ -45,5 +45,28 @@
             "category": "sports"
         }
         
+    ],
+    "events": [
+        {
+            "id": 1,
+            "title": "Event 1",
+            "description": "Description for Event 1",
+            "category":"sports",
+            "date": "2023-10-01"
+        },
+        {
+            "id": 2,
+            "title": "Event 2",
+            "description": "Description for Event 2",
+            "category":"tech",
+            "date": "2023-10-02"
+        },
+        {
+            "id": 3,
+            "title": "Event 3",
+            "description": "Description for Event 3",
+            "category":"food",
+            "date": "2023-10-03"
+        }
     ]
 }
