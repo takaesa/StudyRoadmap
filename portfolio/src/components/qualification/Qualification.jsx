@@ -1,9 +1,13 @@
-import { useState } from 'react'
 import React from 'react'
 import './qualification.css'
+import { AnimatePresence } from "motion/react"
+import * as motion from "motion/react-client"
+import { useState } from "react"
 
 const Qualification = () => {
     const [toggle, setToggle] = useState(1);
+    const [selectedTab, setSelectedTab] = useState(1)
+
     return (
 
         <section className='qualification section'>
@@ -23,136 +27,153 @@ const Qualification = () => {
                 </div>
 
                 <div className="qualification__sections">
-                    <div className={toggle === 1 ? "qualification__content qualification__content-active" : "qualification__content"}>
-                        <div className="qualification__data">
+                    <AnimatePresence mode='wait'>
+                        {toggle === 1 && (
+                            <motion.div key="education"
+                                layout
+                                className="qualification__content qualification__content-active"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ type: 'spring', stiffness: 100, damping: 30, duration: 0.3 }}
+                            >
+                                <div className="qualification__data">
 
-                            <div>
-                                <h3 className="qualification__title">Web Design</h3>
-                                <span className="qualification__subtitle">Spain - Institute</span>
-                                <div className="qualification__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
-                                    2021 - Present
+                                    <div style={{ justifySelf: 'flex-end' }}>
+                                        <h3 className="qualification__title">Web Design</h3>
+                                        <span className="qualification__subtitle">Spain - Institute</span>
+                                        <div className="qualification__calendar">
+                                            <i className="uil uil-calendar-alt"></i>
+                                            2021 - Present
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <span className="qualification__rounded"></span>
+                                        <span className="qualification__line"></span>
+                                    </div>
+
+                                    <div></div>
                                 </div>
-                            </div>
+                                <div className="qualification__data">
+                                    <div></div>
+                                    <div>
+                                        <span className="qualification__rounded"></span>
+                                        <span className="qualification__line"></span>
+                                    </div>
+                                    <div>
+                                        <h3 className="qualification__title">Art Director</h3>
+                                        <span className="qualification__subtitle">Spain - Institute</span>
+                                        <div className="qualification__calendar">
+                                            <i className="uil uil-calendar-alt"></i>
+                                            2021 - Present
+                                        </div>
+                                    </div>
 
-                            <div>
-                                <span className="qualification__rounded"></span>
-                                <span className="qualification__line"></span>
-                            </div>
 
-                            <div></div>
-                        </div>
-                        <div className="qualification__data">
-                            <div></div>
-                            <div>
-                                <span className="qualification__rounded"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                            <div>
-                                <h3 className="qualification__title">Art Director</h3>
-                                <span className="qualification__subtitle">Spain - Institute</span>
-                                <div className="qualification__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
-                                    2021 - Present
+
                                 </div>
-                            </div>
+                                <div className="qualification__data">
 
+                                    <div style={{ justifySelf: 'flex-end' }}>
+                                        <h3 className="qualification__title">Web Development</h3>
+                                        <span className="qualification__subtitle">Spain - Institute</span>
+                                        <div className="qualification__calendar">
+                                            <i className="uil uil-calendar-alt"></i>
+                                            2021 - Present
+                                        </div>
+                                    </div>
 
+                                    <div>
+                                        <span className="qualification__rounded"></span>
+                                        <span className="qualification__line"></span>
+                                    </div>
+                                    <div></div>
 
-                        </div>
-                        <div className="qualification__data">
-
-                            <div>
-                                <h3 className="qualification__title">Web Development</h3>
-                                <span className="qualification__subtitle">Spain - Institute</span>
-                                <div className="qualification__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
-                                    2021 - Present
                                 </div>
-                            </div>
-
-                            <div>
-                                <span className="qualification__rounded"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                            <div></div>
-
-                        </div>
-                        <div className="qualification__data">
-                            <div></div>
-                            <div>
-                                <span className="qualification__rounded"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                            <div>
-                                <h3 className="qualification__title">UX Developer</h3>
-                                <span className="qualification__subtitle">Spain - Institute</span>
-                                <div className="qualification__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
-                                    2021 - Present
+                                <div className="qualification__data">
+                                    <div></div>
+                                    <div>
+                                        <span className="qualification__rounded"></span>
+                                        <span className="qualification__line"></span>
+                                    </div>
+                                    <div>
+                                        <h3 className="qualification__title">UX Developer</h3>
+                                        <span className="qualification__subtitle">Spain - Institute</span>
+                                        <div className="qualification__calendar">
+                                            <i className="uil uil-calendar-alt"></i>
+                                            2021 - Present
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
 
+                    <AnimatePresence mode='wait'>
+                        {toggle === 2 && (
+                            <motion.div key="education"
+                                layout
+                                className="qualification__content qualification__content-active"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ type: 'spring', stiffness: 100, damping: 30, duration: 0.3 }}
+                            >
+                                <div className="qualification__data">
 
+                                    <div style={{ justifySelf: 'flex-end' }}>
+                                        <h3 className="qualification__title">Small job</h3>
+                                        <span className="qualification__subtitle">Spain - Institute</span>
+                                        <div className="qualification__calendar">
+                                            <i className="uil uil-calendar-alt"></i>
+                                            2021 - Present
+                                        </div>
+                                    </div>
 
-                        </div>
-                    </div>
-                    <div className={toggle === 2 ? "qualification__content qualification__content-active" : "qualification__content"}>
-                        <div className="qualification__data">
+                                    <div>
+                                        <span className="qualification__rounded"></span>
+                                        <span className="qualification__line"></span>
+                                    </div>
+                                    <div></div>
 
-                            <div>
-                                <h3 className="qualification__title">Small job</h3>
-                                <span className="qualification__subtitle">Spain - Institute</span>
-                                <div className="qualification__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
-                                    2021 - Present
                                 </div>
-                            </div>
-
-                            <div>
-                                <span className="qualification__rounded"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                            <div></div>
-
-                        </div>
-                        <div className="qualification__data">
-                            <div></div>
-                            <div>
-                                <span className="qualification__rounded"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                            <div>
-                                <h3 className="qualification__title">No Exp</h3>
-                                <span className="qualification__subtitle">Spain - Institute</span>
-                                <div className="qualification__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
-                                    2021 - Present
+                                <div className="qualification__data">
+                                    <div></div>
+                                    <div>
+                                        <span className="qualification__rounded"></span>
+                                        <span className="qualification__line"></span>
+                                    </div>
+                                    <div>
+                                        <h3 className="qualification__title">No Exp</h3>
+                                        <span className="qualification__subtitle">Spain - Institute</span>
+                                        <div className="qualification__calendar">
+                                            <i className="uil uil-calendar-alt"></i>
+                                            2021 - Present
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div className="qualification__data">
+                                    <div style={{ justifySelf: 'flex-end' }}>
+                                        <h3 className="qualification__title">Web Development</h3>
+                                        <span className="qualification__subtitle">Spain - Institute</span>
+                                        <div className="qualification__calendar">
+                                            <i className="uil uil-calendar-alt"></i>
+                                            2021 - Present
+                                        </div>
+                                    </div>
 
+                                    <div>
+                                        <span className="qualification__rounded"></span>
+                                        <span className="qualification__line"></span>
+                                    </div>
+                                    <div></div>
 
-
-                        </div>
-                        <div className="qualification__data">
-
-                            <div>
-                                <h3 className="qualification__title">Web Development</h3>
-                                <span className="qualification__subtitle">Spain - Institute</span>
-                                <div className="qualification__calendar">
-                                    <i className="uil uil-calendar-alt"></i>
-                                    2021 - Present
                                 </div>
-                            </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
 
-                            <div>
-                                <span className="qualification__rounded"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                            <div></div>
-
-                        </div>
-                    </div>
                 </div>
             </div>
         </section >

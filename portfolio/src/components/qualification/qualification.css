@@ -28,14 +28,15 @@
   display: grid;
   grid-template-columns: 0.5fr;
   justify-content: center;
+  position: relative;
+  min-height: 350px;
 }
 
 .qualification__content {
-  display: none;
-}
-
-.qualification__content-active {
-  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .qualification__data {
