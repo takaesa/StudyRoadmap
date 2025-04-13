@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "swiper": "^11.2.6"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "swiper": "^11.2.6",
+    "zod": "^3.24.2"
   }
 }
