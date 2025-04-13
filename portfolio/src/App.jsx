@@ -11,6 +11,8 @@ import Testimonial from "./components/testimonials/Testimonial";
 import { useSpring, useScroll, } from "motion/react";
 import { motion } from "framer-motion"
 import FadeInSection from "./FadeInSection";
+import Footer from "./components/footer/Footer";
+import ScrollUp from "./components/scrollup/ScrollUp";
 
 const App = () => {
 
@@ -60,6 +62,12 @@ const App = () => {
         </FadeInSection>
         <FadeInSection>
           <Contact />
+        </FadeInSection>
+        <FadeInSection>
+          <Footer />
+        </FadeInSection>
+        <FadeInSection>
+          <ScrollUp />
         </FadeInSection>
       </main>
     </>

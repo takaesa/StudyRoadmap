@@ -34,7 +34,7 @@ const Qualification = () => {
                                 className="qualification__content qualification__content-active"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
+
                                 transition={{ type: 'spring', stiffness: 100, damping: 30, duration: 0.3 }}
                             >
                                 <div className="qualification__data">
@@ -117,7 +117,7 @@ const Qualification = () => {
                                 className="qualification__content qualification__content-active"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
+
                                 transition={{ type: 'spring', stiffness: 100, damping: 30, duration: 0.3 }}
                             >
                                 <div className="qualification__data">

@@ -3,6 +3,7 @@ import './home.css'
 import Social from './Social'
 import Data from './Data'
 import Scrolldown from './Scrolldown'
+import AboutImg from '../../assets/about.jpg'
 
 const Home = () => {
     return (
@@ -10,10 +11,8 @@ const Home = () => {
             <div className="home__container container grid">
                 <div className="home__content grid">
                     <Social />
-
-                    <div className="home__img"></div>
-
                     <Data></Data>
+                    <img src={AboutImg} alt="" className="about__img" sizes="(max-width: 768px) 100vw, 300px" />
                 </div>
                 <Scrolldown />
             </div>

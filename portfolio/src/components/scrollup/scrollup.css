@@ -1,0 +1,10 @@
+.scrollup {
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scrollup.show-scroll {
+  opacity: 1;
+  pointer-events: auto;
+}
