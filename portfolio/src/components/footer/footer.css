@@ -54,7 +54,7 @@
   background-color: var(--title-color);
   color: var(--container-color);
   font-size: 1.25rem;
-  padding: 0.4rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 0.5rem;
   display: inline-flex;
 }

@@ -12,7 +12,8 @@ import { useSpring, useScroll, } from "motion/react";
 import { motion } from "framer-motion"
 import FadeInSection from "./FadeInSection";
 import Footer from "./components/footer/Footer";
-import ScrollUp from "./components/scrollup/ScrollUp";
+import ScrollUpBtn from "./components/scrollup/ScrollUpBtn";
+
 
 const App = () => {
 
@@ -67,7 +68,7 @@ const App = () => {
           <Footer />
         </FadeInSection>
         <FadeInSection>
-          <ScrollUp />
+          <ScrollUpBtn />
         </FadeInSection>
       </main>
     </>
